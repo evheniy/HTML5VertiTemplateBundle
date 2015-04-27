@@ -1,0 +1,24 @@
+{
+    "name": "evheniy/html5-verti-template-bundle",
+    "version": "0.1",
+    "description": "The HTML5VertiTemplateBundle adds the ability to add free responsive site template by HTML5 to your application.",
+    "keywords": ["HTML5", "Template", "Symfony", "Verty", "Responsive"],
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name":     "evheniy",
+            "homepage": "https://github.com/evheniy"
+        }
+    ],
+    "require": {
+        "php":             ">=5.3.0",
+        "symfony/symfony": ">=2.4"
+    },
+    "autoload": {
+        "psr-0": {
+            "Evheniy\\HTML5VertiTemplateBundle": ""
+        }
+    },
+    "target-dir" : "Evheniy/HTML5VertiTemplateBundle"
+}
