@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+{%- spaceless -%}
+<html>
+<head>
+    <title>{%- block title -%}{%- endblock -%}</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="{%- block description -%}{%- endblock -%}" />
+    <meta name="keywords" content="{%- block keywords -%}{%- endblock -%}" />
+    {%- stylesheets '@HTML5VertiTemplateBundle/Resources/public/css/skel.css' filter='uglifycss' output='css/skel.css' -%}
+    <link rel="stylesheet" type="text/css" href="{{- html5_verti_template.cdn -}}{{- asset_url -}}"/>
+    {%- endstylesheets -%}
+    <noscript>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-desktop.css" />
+    </noscript>
+    {%- stylesheets '@HTML5VertiTemplateBundle/Resources/public/css/ie/v8.css' filter='uglifycss' output='css/ie/v8.css' -%}
+    <!--[if lte IE 8]><link rel="stylesheet" href="{{- cdn -}}{{- asset_url -}}" /><![endif]-->
+    {%- endstylesheets -%}
+    {%- stylesheets '@HTML5VertiTemplateBundle/Resources/public/fonts/FontAwesome.otf' output='fonts/FontAwesome.otf' -%}{%- endstylesheets -%}
+    {%- stylesheets '@HTML5VertiTemplateBundle/Resources/public/fonts/fontawesome-webfont.eot' output='fonts/fontawesome-webfont.eot' -%}{%- endstylesheets -%}
+    {%- stylesheets '@HTML5VertiTemplateBundle/Resources/public/fonts/fontawesome-webfont.svg' output='fonts/fontawesome-webfont.svg' -%}{%- endstylesheets -%}
+    {%- stylesheets '@HTML5VertiTemplateBundle/Resources/public/fonts/fontawesome-webfont.ttf' output='fonts/fontawesome-webfont.ttf' -%}{%- endstylesheets -%}
+    {%- stylesheets '@HTML5VertiTemplateBundle/Resources/public/fonts/fontawesome-webfont.woff' output='fonts/fontawesome-webfont.woff' -%}{%- endstylesheets -%}
+    {%- stylesheets '@HTML5VertiTemplateBundle/Resources/public/fonts/fontawesome-webfont.woff2' output='fonts/fontawesome-webfont.woff2' -%}{%- endstylesheets -%}
+    {%- image '@HTML5VertiTemplateBundle/Resources/public/images/bg01.png' filter='optipng' output='images/bg01.png' -%}{%- endimage -%}
+    {%- image '@HTML5VertiTemplateBundle/Resources/public/images/pic01.jpg' filter='jpegoptim' output='images/pic01.jpg' -%}{%- endimage -%}
+    {%- image '@HTML5VertiTemplateBundle/Resources/public/images/pic02.jpg' filter='jpegoptim' output='images/pic02.jpg' -%}{%- endimage -%}
+    {%- image '@HTML5VertiTemplateBundle/Resources/public/images/pic03.jpg' filter='jpegoptim' output='images/pic03.jpg' -%}{%- endimage -%}
+    {%- image '@HTML5VertiTemplateBundle/Resources/public/images/pic04.jpg' filter='jpegoptim' output='images/pic04.jpg' -%}{%- endimage -%}
+    {%- image '@HTML5VertiTemplateBundle/Resources/public/images/pic05.jpg' filter='jpegoptim' output='images/pic05.jpg' -%}{%- endimage -%}
+    {%- image '@HTML5VertiTemplateBundle/Resources/public/images/pic06.jpg' filter='jpegoptim' output='images/pic06.jpg' -%}{%- endimage -%}
+    {%- image '@HTML5VertiTemplateBundle/Resources/public/images/pic07.jpg' filter='jpegoptim' output='images/pic07.jpg' -%}{%- endimage -%}
+    {%- stylesheets '@HTML5VertiTemplateBundle/Resources/public/css/style.css' filter='uglifycss' output='css/style.css' -%}{%- endstylesheets -%}
+    {%- stylesheets '@HTML5VertiTemplateBundle/Resources/public/css/style-desktop.css' filter='uglifycss' output='css/style-desktop.css' -%}{%- endstylesheets -%}
+    {%- stylesheets '@HTML5VertiTemplateBundle/Resources/public/css/font-awesome.min.css' filter='uglifycss' output='css/font-awesome.min.css' -%}{%- endstylesheets -%}
+    {%- stylesheets '@HTML5VertiTemplateBundle/Resources/public/css/style-1000px.css' filter='uglifycss' output='css/style-1000px.css' -%}{%- endstylesheets -%}
+    {%- stylesheets '@HTML5VertiTemplateBundle/Resources/public/css/style-mobile.css' filter='uglifycss' output='css/style-mobile.css' -%}{%- endstylesheets -%}
+    {%- block head -%}{%- endblock -%}
+</head>
+<body class="{%- block body_class -%}{%- endblock -%}">
+{%- block body -%}{%- endblock -%}
+{%- javascripts '@HTML5VertiTemplateBundle/Resources/public/css/ie/html5shiv.js' filter='uglifyjs2' output='css/ie/html5shiv.js' -%}
+<!--[if lte IE 8]><script src="{{- html5_verti_template.cdn -}}{{- asset_url -}}"></script><![endif]-->
+{%- endjavascripts -%}
+{%- include "JqueryBundle:Jquery:jquery.html.twig" -%}
+{%- javascripts
+'@HTML5VertiTemplateBundle/Resources/public/js/jquery.dropotron.min.js'
+'@HTML5VertiTemplateBundle/Resources/public/js/skel.min.js'
+'@HTML5VertiTemplateBundle/Resources/public/js/skel-layers.min.js'
+'@HTML5VertiTemplateBundle/Resources/public/js/init.js'
+filter='uglifyjs2' -%}
+<script src="{{- html5_verti_template.cdn -}}{{- asset_url -}}"></script>
+{%- endjavascripts -%}
+{%- block javascripts -%}{%- endblock -%}
+</body>
+</html>
+{%- endspaceless -%}

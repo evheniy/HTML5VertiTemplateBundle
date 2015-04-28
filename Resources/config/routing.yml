@@ -1,0 +1,15 @@
+HTML5_verti_template_bundle_demo_index:
+    pattern:  /
+    defaults: { _controller: HTML5VertiTemplateBundle:Demo:index }
+
+HTML5_verti_template_bundle_demo_left_sidebar:
+    pattern:  /left-sidebar.html
+    defaults: { _controller: HTML5VertiTemplateBundle:Demo:left_sidebar }
+
+HTML5_verti_template_bundle_demo_right_sidebar:
+    pattern:  /right-sidebar.html
+    defaults: { _controller: HTML5VertiTemplateBundle:Demo:right_sidebar }
+
+HTML5_verti_template_bundle_demo_no_sidebar:
+    pattern:  /no-sidebar.html
+    defaults: { _controller: HTML5VertiTemplateBundle:Demo:no_sidebar }
