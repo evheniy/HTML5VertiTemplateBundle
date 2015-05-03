@@ -46,9 +46,9 @@ class HTML5VertiTemplateExtension extends Extension
                     array_filter(preg_split('/[^a-z0-9\.]+/', $url['path']))
                 );
             }
-            $cdn = '//' . $cdn . '/';
+            $cdn = '//' . $cdn;
         } else {
-            $cdn = '/';
+            $cdn = '';
         }
 
         return $cdn;

@@ -55,8 +55,7 @@ class HTML5VertiTemplateExtensionTest extends \PHPUnit_Framework_TestCase
         $html5VertiTemplate = $this->container->getParameter('html5_verti_template');
         $this->assertNotEmpty($html5VertiTemplate);
         $this->assertTrue(is_array($html5VertiTemplate));
-        $this->assertNotEmpty($html5VertiTemplate['cdn']);
-        $this->assertEquals('/', $html5VertiTemplate['cdn']);
+        $this->assertEmpty($html5VertiTemplate['cdn']);
     }
 
     /**
@@ -69,7 +68,7 @@ class HTML5VertiTemplateExtensionTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($this->container->hasParameter('html5_verti_template'));
         $html5VertiTemplate = $this->container->getParameter('html5_verti_template');
         $this->assertNotEmpty($html5VertiTemplate['cdn']);
-        $this->assertEquals($html5VertiTemplate['cdn'], '//cdn.site.com/');
+        $this->assertEquals($html5VertiTemplate['cdn'], '//cdn.site.com');
     }
 
     /**
@@ -80,14 +79,14 @@ class HTML5VertiTemplateExtensionTest extends \PHPUnit_Framework_TestCase
         $reflectionClass = new \ReflectionClass('\Evheniy\HTML5VertiTemplateBundle\DependencyInjection\HTML5VertiTemplateExtension');
         $method = $reflectionClass->getMethod('filterCdn');
         $method->setAccessible(true);
-        $this->assertEquals($method->invoke($this->extension, ''), '/');
-        $this->assertEquals($method->invoke($this->extension, '/'), '/');
-        $this->assertEquals($method->invoke($this->extension, 'cdn.site.com'), '//cdn.site.com/');
-        $this->assertEquals($method->invoke($this->extension, '//cdn.site.com'), '//cdn.site.com/');
-        $this->assertEquals($method->invoke($this->extension, 'http://cdn.site.com'), '//cdn.site.com/');
-        $this->assertEquals($method->invoke($this->extension, 'http://cdn.site.com/'), '//cdn.site.com/');
-        $this->assertEquals($method->invoke($this->extension, 'https://cdn.site.com'), '//cdn.site.com/');
-        $this->assertEquals($method->invoke($this->extension, 'https://cdn.site.com/'), '//cdn.site.com/');
+        $this->assertEquals($method->invoke($this->extension, ''), '');
+        $this->assertEquals($method->invoke($this->extension, '/'), '');
+        $this->assertEquals($method->invoke($this->extension, 'cdn.site.com'), '//cdn.site.com');
+        $this->assertEquals($method->invoke($this->extension, '//cdn.site.com'), '//cdn.site.com');
+        $this->assertEquals($method->invoke($this->extension, 'http://cdn.site.com'), '//cdn.site.com');
+        $this->assertEquals($method->invoke($this->extension, 'http://cdn.site.com/'), '//cdn.site.com');
+        $this->assertEquals($method->invoke($this->extension, 'https://cdn.site.com'), '//cdn.site.com');
+        $this->assertEquals($method->invoke($this->extension, 'https://cdn.site.com/'), '//cdn.site.com');
     }
 
     /**
