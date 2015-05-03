@@ -26,7 +26,7 @@ class DemoControllerTest extends WebTestCase
      */
     public function testIndexAction()
     {
-        $crawler = $this->client->request('GET', '/');
+        $crawler = $this->client->request('GET', '/verti/');
         $this->assertGreaterThan(
             0,
             $crawler->filter('html:contains("Hi. This is Verti.")')->count()
@@ -38,7 +38,7 @@ class DemoControllerTest extends WebTestCase
      */
     public function testLeftSidebarAction()
     {
-        $crawler = $this->client->request('GET', '/left-sidebar.html');
+        $crawler = $this->client->request('GET', '/verti/left-sidebar.html');
         $this->assertGreaterThan(
             0,
             $crawler->filter('html:contains("Left Sidebar")')->count()
@@ -50,7 +50,7 @@ class DemoControllerTest extends WebTestCase
      */
     public function testRightSidebarAction()
     {
-        $crawler = $this->client->request('GET', '/right-sidebar.html');
+        $crawler = $this->client->request('GET', '/verti/right-sidebar.html');
         $this->assertGreaterThan(
             0,
             $crawler->filter('html:contains("Right Sidebar")')->count()
@@ -62,7 +62,7 @@ class DemoControllerTest extends WebTestCase
      */
     public function testNoSidebarAction()
     {
-        $crawler = $this->client->request('GET', '/no-sidebar.html');
+        $crawler = $this->client->request('GET', '/verti/no-sidebar.html');
         $this->assertGreaterThan(
             0,
             $crawler->filter('html:contains("No Sidebar")')->count()
