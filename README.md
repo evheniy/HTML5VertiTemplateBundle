@@ -32,6 +32,25 @@ config.yml:
     #HTML5VertiTemplateBundle
     html5_verti_template:
         cdn: cdn.site.com
+        
+And Assetic Configuration in config.yml:
+
+    #Assetic Configuration
+    assetic:
+        bundles: [ HTML5VertiTemplateBundle ]
+        filters:
+            uglifyjs2:
+                bin: /usr/local/bin/uglifyjs
+            uglifycss:
+                bin: /usr/local/bin/uglifycss
+            optipng:
+                bin: /usr/bin/optipng
+            jpegoptim:
+                bin: /usr/bin/jpegoptim
+        
+The last step
+
+    app/console assetic:dump --env=prod --no-debug
 
 Documentation
 -------------

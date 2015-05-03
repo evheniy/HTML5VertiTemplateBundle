@@ -26,6 +26,8 @@ class HTML5VertiTemplateExtension extends Extension
         $config = $processor->processConfiguration($configuration, $configs);
         $config['cdn'] = $this->filterCdn($config['cdn']);
         $container->setParameter('html5_verti_template', $config);
+        $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
+        $loader->load('services.yml');
     }
 
     /**

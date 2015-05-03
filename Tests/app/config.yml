@@ -1,5 +1,3 @@
-imports:
-    - { resource: "@HTML5VertiTemplateBundle/Resources/config/services.yml" }
 framework:
     secret:          secret
     test:            ~
