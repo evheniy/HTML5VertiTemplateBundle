@@ -56,7 +56,7 @@ This bundle is under the [MIT][3] license.
 
 [Документация на русском языке][1]
 
-[Demo][2] - Open page, then turn off network and update page
+[Demo][2]
 
 [Verti is a free responsive site template by HTML5 UP][4]
 

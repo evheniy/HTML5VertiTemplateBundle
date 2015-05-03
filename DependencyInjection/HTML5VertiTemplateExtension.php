@@ -35,7 +35,7 @@ class HTML5VertiTemplateExtension extends Extension
      */
     protected function filterCdn($cdn)
     {
-        if (!empty($cdn)) {
+        if (!empty($cdn) && $cdn != '/') {
             $url = parse_url($cdn);
             if (!empty($url['host'])) {
                 $cdn = $url['host'];
@@ -44,6 +44,9 @@ class HTML5VertiTemplateExtension extends Extension
                     array_filter(preg_split('/[^a-z0-9\.]+/', $url['path']))
                 );
             }
+            $cdn = '//' . $cdn . '/';
+        } else {
+            $cdn = '/';
         }
 
         return $cdn;

@@ -1,0 +1,25 @@
+imports:
+    - { resource: "@HTML5VertiTemplateBundle/Resources/config/services.yml" }
+framework:
+    secret:          secret
+    test:            ~
+    router:          { resource: "%kernel.root_dir%/../../Resources/config/routing.yml" }
+    templating:
+        engines: ['twig']
+twig:
+    debug:            "%kernel.debug%"
+    strict_variables: "%kernel.debug%"
+assetic:
+    debug:          %kernel.debug%
+    use_controller: false
+    bundles:        [ HTML5VertiTemplateBundle, JqueryBundle ]
+    filters:
+        uglifyjs2:
+            bin: /usr/local/bin/uglifyjs
+        uglifycss:
+            bin: /usr/local/bin/uglifycss
+        optipng:
+            bin: /usr/bin/optipng
+        jpegoptim:
+            bin: /usr/bin/jpegoptim
+jquery: ~

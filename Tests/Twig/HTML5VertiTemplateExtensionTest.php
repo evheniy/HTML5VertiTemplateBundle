@@ -33,7 +33,7 @@ class HTML5VertiTemplateExtensionTest extends \PHPUnit_Framework_TestCase
     /**
      * Test normal config
      */
-    public function testWithId()
+    public function testWithCDN()
     {
         $this->container->setParameter('html5_verti_template', array('cdn' => 'test'));
         $this->assertTrue($this->container->hasParameter('html5_verti_template'));
@@ -49,7 +49,7 @@ class HTML5VertiTemplateExtensionTest extends \PHPUnit_Framework_TestCase
     /**
      * Test empty config
      */
-    public function testWithOutLocal()
+    public function testWithOutData()
     {
         $this->assertFalse($this->container->hasParameter('html5_verti_template'));
         $this->setExpectedException(
