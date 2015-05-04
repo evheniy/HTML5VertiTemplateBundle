@@ -22,6 +22,7 @@ class AppKernel extends Kernel
             new Evheniy\HTML5CacheBundle\HTML5CacheBundle(),
             new Evheniy\HTML5VertiTemplateBundle\HTML5VertiTemplateBundle()
         );
+
         return $bundles;
     }
 

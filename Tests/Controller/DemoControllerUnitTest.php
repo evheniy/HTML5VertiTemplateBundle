@@ -4,6 +4,11 @@ namespace Evheniy\HTML5VertiTemplateBundle\Tests\Controller;
 
 use Evheniy\HTML5VertiTemplateBundle\Controller\DemoController;
 
+/**
+ * Class DemoControllerUnitTest
+ *
+ * @package Evheniy\HTML5VertiTemplateBundle\Tests\Controller
+ */
 class DemoControllerUnitTest extends \PHPUnit_Framework_TestCase
 {
     /**

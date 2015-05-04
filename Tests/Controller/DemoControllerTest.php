@@ -4,6 +4,11 @@ namespace Evheniy\HTML5VertiTemplateBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
+/**
+ * Class DemoControllerTest
+ *
+ * @package Evheniy\HTML5VertiTemplateBundle\Tests\Controller
+ */
 class DemoControllerTest extends WebTestCase
 {
     /**
