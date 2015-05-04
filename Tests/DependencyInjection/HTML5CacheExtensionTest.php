@@ -72,24 +72,6 @@ class HTML5VertiTemplateExtensionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test filterCdn method
-     */
-    public function testFilterCdn()
-    {
-        $reflectionClass = new \ReflectionClass('\Evheniy\HTML5VertiTemplateBundle\DependencyInjection\HTML5VertiTemplateExtension');
-        $method = $reflectionClass->getMethod('filterCdn');
-        $method->setAccessible(true);
-        $this->assertEquals($method->invoke($this->extension, ''), '');
-        $this->assertEquals($method->invoke($this->extension, '/'), '');
-        $this->assertEquals($method->invoke($this->extension, 'cdn.site.com'), '//cdn.site.com');
-        $this->assertEquals($method->invoke($this->extension, '//cdn.site.com'), '//cdn.site.com');
-        $this->assertEquals($method->invoke($this->extension, 'http://cdn.site.com'), '//cdn.site.com');
-        $this->assertEquals($method->invoke($this->extension, 'http://cdn.site.com/'), '//cdn.site.com');
-        $this->assertEquals($method->invoke($this->extension, 'https://cdn.site.com'), '//cdn.site.com');
-        $this->assertEquals($method->invoke($this->extension, 'https://cdn.site.com/'), '//cdn.site.com');
-    }
-
-    /**
      *
      */
     public function testGetAlias()

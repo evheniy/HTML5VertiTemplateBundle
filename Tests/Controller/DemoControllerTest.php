@@ -7,7 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 class DemoControllerTest extends WebTestCase
 {
     /**
-     * @var
+     * @var \Symfony\Bundle\FrameworkBundle\Client
      */
     protected $client;
 
