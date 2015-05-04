@@ -93,8 +93,25 @@ Default value is empty
 Using
 -----
 
+This bundle provides 4 kinds of view:
 
-
+ - [main page][2]:
+ 
+    {% extends "HTML5VertiTemplateBundle::index.html.twig" %}
+ 
+ - with [left sidebar][7]:
+ 
+    {% extends "HTML5VertiTemplateBundle::left_sidebar.html.twig" %}
+ 
+ - with [right sidebar][8]:
+ 
+    {% extends "HTML5VertiTemplateBundle::right_sidebar.html.twig" %}
+ 
+ - [without sidebar][9]:
+ 
+    {% extends "HTML5VertiTemplateBundle::no_sidebar.html.twig" %}
+ 
+You can see how it looks like on [demo][2]
 
 License
 -------
@@ -113,3 +130,6 @@ This bundle is under the [MIT][3] license.
 [4]:  http://html5up.net/verti
 [5]:  https://github.com/evheniy/JqueryBundle
 [6]:  https://github.com/evheniy/HTML5CacheBundle
+[7]:  http://makedev.org/verti/left-sidebar.html
+[8]:  http://makedev.org/verti/right-sidebar.html
+[9]:  http://makedev.org/verti/no-sidebar.html

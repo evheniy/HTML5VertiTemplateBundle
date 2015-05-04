@@ -44,7 +44,9 @@
             <!-- Nav -->
             <nav id="nav">
                 <ul>
-                    <li><a href="index.html">Welcome</a></li>
+                    <li{%- if app.request.attributes.get('_route') == 'HTML5_verti_template_bundle_demo_index' %} class="current"{%- endif -%}>
+                        <a href="{{- path('HTML5_verti_template_bundle_demo_index') -}}">Welcome</a>
+                    </li>
                     <li>
                         <a href="">Dropdown</a>
                         <ul>
