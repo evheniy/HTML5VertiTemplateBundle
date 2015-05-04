@@ -22,3 +22,5 @@ assetic:
             bin: /usr/bin/jpegoptim
 jquery: ~
 html5_cache: ~
+html5_verti_template:
+    cdn: cdn.site.com

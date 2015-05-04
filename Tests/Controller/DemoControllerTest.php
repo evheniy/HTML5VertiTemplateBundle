@@ -3,6 +3,9 @@
 namespace Evheniy\HTML5VertiTemplateBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+use Symfony\Component\Config\FileLocator;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 /**
  * Class DemoControllerTest
@@ -72,5 +75,36 @@ class DemoControllerTest extends WebTestCase
             0,
             $crawler->filter('html:contains("No Sidebar")')->count()
         );
+    }
+
+    /**
+     * 
+     */
+    public function testCDN()
+    {
+        $this->client = static::createClient(array('environment' => 'cdn', 'debug' => false));
+        $this->client->getContainer()->get('twig.loader')->addPath(dirname(__FILE__) . '/../../Resources/views/');
+        $this->client->getContainer()->get('twig.loader')->addPath(dirname(__FILE__) . '/../../vendor/evheniy/jquery-bundle/Evheniy/JqueryBundle/Resources/views/');
+        $this->client->request('GET', '/verti/');
+        $this->assertRegExp('/\/\/cdn\.site\.com\/css\/style\.css/', $this->client->getResponse()->getContent());
+        $this->assertRegExp('/\/\/cdn\.site\.com\/css\/style\-desktop\.css/', $this->client->getResponse()->getContent());
+        $this->assertRegExp('/\/\/cdn\.site\.com\/css\/ie\/v8\.css/', $this->client->getResponse()->getContent());
+        $this->assertRegExp('/\/\/cdn\.site\.com\/css\/ie\/html5shiv\.js/', $this->client->getResponse()->getContent());
+        $this->assertRegExp('/var\ cdn\ \=\ \'\/\/cdn.site.com\'\;/', $this->client->getResponse()->getContent());
+
+        $this->client = static::createClient(array('environment' => 'test', 'debug' => false));
+        $this->client->getContainer()->get('twig.loader')->addPath(dirname(__FILE__) . '/../../Resources/views/');
+        $this->client->getContainer()->get('twig.loader')->addPath(dirname(__FILE__) . '/../../vendor/evheniy/jquery-bundle/Evheniy/JqueryBundle/Resources/views/');
+        $this->client->request('GET', '/verti/');
+        $this->assertRegExp('/\/css\/style\.css/', $this->client->getResponse()->getContent());
+        $this->assertRegExp('/\/css\/style\-desktop\.css/', $this->client->getResponse()->getContent());
+        $this->assertRegExp('/\/css\/ie\/v8\.css/', $this->client->getResponse()->getContent());
+        $this->assertRegExp('/\/css\/ie\/html5shiv\.js/', $this->client->getResponse()->getContent());
+        $this->assertRegExp('/var\ cdn\ \=\ \'\'\;/', $this->client->getResponse()->getContent());
+        $this->assertNotRegExp('/\/\/cdn\.site\.com\/css\/style\.css/', $this->client->getResponse()->getContent());
+        $this->assertNotRegExp('/\/\/cdn\.site\.com\/css\/style\-desktop\.css/', $this->client->getResponse()->getContent());
+        $this->assertNotRegExp('/\/\/cdn\.site\.com\/css\/ie\/v8\.css/', $this->client->getResponse()->getContent());
+        $this->assertNotRegExp('/\/\/cdn\.site\.com\/css\/ie\/html5shiv\.js/', $this->client->getResponse()->getContent());
+        $this->assertNotRegExp('/var\ cdn\ \=\ \'\/\/cdn.site.com\'\;/', $this->client->getResponse()->getContent());
     }
 }
