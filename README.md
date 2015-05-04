@@ -43,7 +43,7 @@ And Assetic Configuration in config.yml:
 
     #Assetic Configuration
     assetic:
-        bundles: [ HTML5VertiTemplateBundle ]
+        bundles: [ HTML5VertiTemplateBundle, JqueryBundle ]
         filters:
             uglifyjs2:
                 bin: /usr/local/bin/uglifyjs
