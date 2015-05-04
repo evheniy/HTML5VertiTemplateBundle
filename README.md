@@ -97,19 +97,19 @@ This bundle provides 4 kinds of view:
 
  - [main page][2]:
  
-    {% extends "HTML5VertiTemplateBundle::index.html.twig" %}
+        {% extends "HTML5VertiTemplateBundle::index.html.twig" %}
  
  - with [left sidebar][7]:
  
-    {% extends "HTML5VertiTemplateBundle::left_sidebar.html.twig" %}
+        {% extends "HTML5VertiTemplateBundle::left_sidebar.html.twig" %}
  
  - with [right sidebar][8]:
  
-    {% extends "HTML5VertiTemplateBundle::right_sidebar.html.twig" %}
+        {% extends "HTML5VertiTemplateBundle::right_sidebar.html.twig" %}
  
  - [without sidebar][9]:
  
-    {% extends "HTML5VertiTemplateBundle::no_sidebar.html.twig" %}
+        {% extends "HTML5VertiTemplateBundle::no_sidebar.html.twig" %}
  
 You can see how it looks like on [demo][2]
 
