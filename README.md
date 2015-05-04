@@ -125,7 +125,7 @@ This bundle is under the [MIT][3] license.
 [Verti is a free responsive site template by HTML5 UP][4]
 
 [1]:  http://makedev.org/articles/symfony/bundles/html5_verti_template_bundle.html
-[2]:  http://makedev.org/verty/
+[2]:  http://makedev.org/verti/
 [3]:  https://github.com/evheniy/HTML5VertiTemplateBundle/blob/master/Resources/meta/LICENSE
 [4]:  http://html5up.net/verti
 [5]:  https://github.com/evheniy/JqueryBundle
