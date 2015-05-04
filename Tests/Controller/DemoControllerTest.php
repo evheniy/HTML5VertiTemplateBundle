@@ -78,7 +78,7 @@ class DemoControllerTest extends WebTestCase
     }
 
     /**
-     * 
+     *
      */
     public function testCDN()
     {
