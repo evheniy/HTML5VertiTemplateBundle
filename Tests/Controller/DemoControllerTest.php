@@ -80,7 +80,7 @@ class DemoControllerTest extends WebTestCase
     /**
      *
      */
-    public function testCDN()
+    public function testWithCDN()
     {
         $this->client = static::createClient(array('environment' => 'cdn', 'debug' => false));
         $this->client->getContainer()->get('twig.loader')->addPath(dirname(__FILE__) . '/../../Resources/views/');
@@ -91,7 +91,13 @@ class DemoControllerTest extends WebTestCase
         $this->assertRegExp('/\/\/cdn\.site\.com\/css\/ie\/v8\.css/', $this->client->getResponse()->getContent());
         $this->assertRegExp('/\/\/cdn\.site\.com\/css\/ie\/html5shiv\.js/', $this->client->getResponse()->getContent());
         $this->assertRegExp('/var\ cdn\ \=\ \'\/\/cdn.site.com\'\;/', $this->client->getResponse()->getContent());
+    }
 
+    /**
+     *
+     */
+    public function testWithoutCDN()
+    {
         $this->client = static::createClient(array('environment' => 'test', 'debug' => false));
         $this->client->getContainer()->get('twig.loader')->addPath(dirname(__FILE__) . '/../../Resources/views/');
         $this->client->getContainer()->get('twig.loader')->addPath(dirname(__FILE__) . '/../../vendor/evheniy/jquery-bundle/Evheniy/JqueryBundle/Resources/views/');
