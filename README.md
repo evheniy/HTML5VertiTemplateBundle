@@ -3,6 +3,8 @@ HTML5VertiTemplateBundle
 
 This bundle provides HTML5 Verti Template for Symfony2
 
+[![knpbundles.com](http://knpbundles.com/evheniy/HTML5VertiTemplateBundle/badge)](http://knpbundles.com/evheniy/HTML5VertiTemplateBundle)
+
 [![Latest Stable Version](https://poser.pugx.org/evheniy/html5-verti-template-bundle/v/stable)](https://packagist.org/packages/evheniy/html5-verti-template-bundle) [![Total Downloads](https://poser.pugx.org/evheniy/html5-verti-template-bundle/downloads)](https://packagist.org/packages/evheniy/html5-verti-template-bundle) [![Latest Unstable Version](https://poser.pugx.org/evheniy/html5-verti-template-bundle/v/unstable)](https://packagist.org/packages/evheniy/html5-verti-template-bundle) [![License](https://poser.pugx.org/evheniy/html5-verti-template-bundle/license)](https://packagist.org/packages/evheniy/html5-verti-template-bundle)
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/evheniy/HTML5VertiTemplateBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/evheniy/HTML5VertiTemplateBundle/?branch=master) [![Build Status](https://scrutinizer-ci.com/g/evheniy/HTML5VertiTemplateBundle/badges/build.png?b=master)](https://scrutinizer-ci.com/g/evheniy/HTML5VertiTemplateBundle/build-status/master)
