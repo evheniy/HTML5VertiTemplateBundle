@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\TwigBundle\TwigBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Evheniy\JqueryBundle\JqueryBundle(),
+            new Evheniy\HTML5CacheBundle\HTML5CacheBundle(),
             new Evheniy\HTML5VertiTemplateBundle\HTML5VertiTemplateBundle()
         );
         return $bundles;

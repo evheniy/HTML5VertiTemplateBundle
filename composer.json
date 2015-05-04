@@ -15,7 +15,8 @@
         "php":             ">=5.3.0",
         "symfony/symfony": ">=2.4",
         "symfony/assetic-bundle": "~2.5-dev",
-        "evheniy/jquery-bundle": "dev-master"
+        "evheniy/jquery-bundle": "dev-master",
+        "evheniy/html5-cache-bundle": "dev-master"
     },
     "autoload": {
         "psr-0": {

@@ -21,3 +21,4 @@ assetic:
         jpegoptim:
             bin: /usr/bin/jpegoptim
 jquery: ~
+html5_cache: ~
