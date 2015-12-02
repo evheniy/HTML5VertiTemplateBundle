@@ -1,6 +1,6 @@
 services:
     evheniy.twig.html5_verti_template_extension:
         class: Evheniy\HTML5VertiTemplateBundle\Twig\HTML5VertiTemplateExtension
-        arguments: [@service_container]
+        arguments: ["@service_container"]
         tags:
             - { name: twig.extension }

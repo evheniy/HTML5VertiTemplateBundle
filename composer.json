@@ -18,6 +18,9 @@
         "evheniy/jquery-bundle": "dev-master",
         "evheniy/html5-cache-bundle": "dev-master"
     },
+    "require-dev": {
+        "satooshi/php-coveralls": "dev-master"
+    },
     "autoload": {
         "psr-0": {
             "Evheniy\\HTML5VertiTemplateBundle": ""
